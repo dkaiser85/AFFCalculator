@@ -249,6 +249,10 @@
         }
 
         #reportModalCTA .modal-content {
+            position: absolute;
+            bottom: 20px;
+            right: 0;
+            left: 0;
             max-width: 400px;
         }
 
@@ -789,7 +793,7 @@
                 body: JSON.stringify(data)
             }
 
-            fetch('https://theculturemri.com/backend/send_form.php', options)
+            fetch('send_form.php', options)
 
             reportModalCTA.style.display = 'none';
 
