@@ -11,6 +11,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
+        /* Base container styles */
+        * {
+            box-sizing: border-box;
+            max-width: 100%; /* Ensure no element exceeds viewport */
+        }
+
         /* Apply Inter Font */
         body {
             font-family: 'Inter', sans-serif;
@@ -116,17 +122,6 @@
             font-weight: 300; /* Inter Light */
             color: #6B7D8D;
             margin-bottom: 10px;
-            min-height: 44px; /* Added: accommodate two lines of text */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        @media (max-width: 600px) {
-            .result-item h3 {
-                min-height: unset; /* Remove fixed height on mobile */
-                margin-bottom: 15px; /* Add more space between title and gauge */
-            }
         }
 
         /* Gauge Styling */
