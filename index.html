@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,19 +15,21 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #ffffff;
-            padding: 20px;
             margin: 0;
+            padding: 10px;
+            min-width: 320px; /* Set minimum width */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         /* Container Styling */
         .calculator-container {
             max-width: 700px;
-            width: 100%;
+            width: calc(100% - 20px); /* Account for body padding */
             margin: 0 auto;
             padding: 25px;
             border-radius: 10px;
             background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Header Styling */
@@ -115,6 +116,17 @@
             font-weight: 300; /* Inter Light */
             color: #6B7D8D;
             margin-bottom: 10px;
+            min-height: 44px; /* Added: accommodate two lines of text */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 600px) {
+            .result-item h3 {
+                min-height: unset; /* Remove fixed height on mobile */
+                margin-bottom: 15px; /* Add more space between title and gauge */
+            }
         }
 
         /* Gauge Styling */
@@ -454,6 +466,26 @@
             gap: 16px;
         }
 
+        /* Add/modify these styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Add more specific responsive handling */
+        @media (max-width: 768px) {
+            body {
+                padding: 5px; /* Reduce padding on smaller screens */
+            }
+
+            .calculator-container {
+                padding: 15px; /* Reduce container padding */
+                width: calc(100% - 10px); /* Adjust for smaller body padding */
+            }
+
+            .input-group {
+                padding: 0 10px; /* Reduce input group padding */
+            }
+        }
     </style>
 </head>
 <body>
@@ -949,7 +981,7 @@
                 
                 <!-- Total Additional Profit (Annual): -->
                 <div class="financial-metrics-center">
-                    <h3 class="total-additional-profit">IMPACT OF ENGAGEMENT INCREASE (ANNUAL):</h3>
+                    <h3 class="total-additional-profit">IMPACT OF ENGAGEMENT INCRECASE (ANNUAL):</h3>
                     <p class="black">${formatCurrency(additionalProfit)}</p>
                     </div>
 
