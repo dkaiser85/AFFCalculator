@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,31 +12,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
-        /* Base container styles */
-        * {
-            box-sizing: border-box;
-            max-width: 100%; /* Ensure no element exceeds viewport */
-        }
-
         /* Apply Inter Font */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #ffffff;
+            padding: 20px;
             margin: 0;
-            padding: 10px;
-            min-width: 320px; /* Set minimum width */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         /* Container Styling */
         .calculator-container {
             max-width: 700px;
-            width: calc(100% - 20px); /* Account for body padding */
+            width: 100%;
             margin: 0 auto;
             padding: 25px;
             border-radius: 10px;
             background-color: #ffffff;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         /* Header Styling */
@@ -461,26 +454,6 @@
             gap: 16px;
         }
 
-        /* Add/modify these styles */
-        * {
-            box-sizing: border-box;
-        }
-
-        /* Add more specific responsive handling */
-        @media (max-width: 768px) {
-            body {
-                padding: 5px; /* Reduce padding on smaller screens */
-            }
-
-            .calculator-container {
-                padding: 15px; /* Reduce container padding */
-                width: calc(100% - 10px); /* Adjust for smaller body padding */
-            }
-
-            .input-group {
-                padding: 0 10px; /* Reduce input group padding */
-            }
-        }
     </style>
 </head>
 <body>
@@ -976,7 +949,7 @@
                 
                 <!-- Total Additional Profit (Annual): -->
                 <div class="financial-metrics-center">
-                    <h3 class="total-additional-profit">IMPACT OF ENGAGEMENT INCRECASE (ANNUAL):</h3>
+                    <h3 class="total-additional-profit">IMPACT OF ENGAGEMENT INCREASE (ANNUAL):</h3>
                     <p class="black">${formatCurrency(additionalProfit)}</p>
                     </div>
 
